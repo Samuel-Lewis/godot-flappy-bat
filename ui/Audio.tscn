@@ -1,0 +1,36 @@
+[gd_scene load_steps=8 format=3 uid="uid://c17bn48p2fcp1"]
+
+[ext_resource type="Script" path="res://scripts/Audio.gd" id="1_xn12y"]
+[ext_resource type="AudioStream" uid="uid://n5qnbyq46vby" path="res://assets/audio/button_click.ogg" id="2_iw3tv"]
+[ext_resource type="AudioStream" uid="uid://u13qv8d3ciu0" path="res://assets/audio/bg_music.wav" id="3_utavi"]
+[ext_resource type="AudioStream" uid="uid://x6qu5agbaf3p" path="res://assets/audio/crash.ogg" id="4_pt2x4"]
+[ext_resource type="AudioStream" uid="uid://cq3b88vwjitcq" path="res://assets/audio/flap.ogg" id="5_2t35m"]
+[ext_resource type="AudioStream" uid="uid://i6cjenv1dboj" path="res://assets/audio/point.ogg" id="6_rc52i"]
+[ext_resource type="AudioStream" uid="uid://dc7sn7ysytkt2" path="res://assets/audio/start.ogg" id="7_awxdu"]
+
+[node name="Audio" type="Node"]
+script = ExtResource("1_xn12y")
+
+[node name="AudioUiClick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_iw3tv")
+volume_db = -5.0
+
+[node name="AudioBGMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_utavi")
+volume_db = -20.0
+autoplay = true
+
+[node name="AudioGameCrash" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_pt2x4")
+
+[node name="AudioGameFlap" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_2t35m")
+volume_db = -10.0
+
+[node name="AudioGamePoint" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_rc52i")
+volume_db = -15.0
+
+[node name="AudioGameStart" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_awxdu")
+volume_db = -10.0

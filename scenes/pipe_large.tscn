@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4deg3e4pubmq"]
+
+[ext_resource type="Texture2D" uid="uid://b3uprmo2visfp" path="res://assets/col_large.png" id="1_m4ei4"]
+[ext_resource type="Script" path="res://scripts/Pipe.gd" id="1_ta3e2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yvlir"]
+size = Vector2(108, 471)
+
+[node name="PipeLarge" type="Node2D"]
+script = ExtResource("1_ta3e2")
+
+[node name="Bottom" type="Area2D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom"]
+position = Vector2(54, 235.5)
+shape = SubResource("RectangleShape2D_yvlir")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bottom"]
+scale = Vector2(3, 3)
+texture = ExtResource("1_m4ei4")
+centered = false
+
+[node name="Top" type="Area2D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Top"]
+position = Vector2(54, -235.5)
+shape = SubResource("RectangleShape2D_yvlir")
+
+[node name="Sprite2D" type="Sprite2D" parent="Top"]
+position = Vector2(0, -471)
+scale = Vector2(3, 3)
+texture = ExtResource("1_m4ei4")
+centered = false
+flip_v = true
+
+[connection signal="body_entered" from="Bottom" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Top" to="." method="_on_body_entered"]
