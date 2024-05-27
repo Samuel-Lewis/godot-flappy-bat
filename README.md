@@ -2,7 +2,7 @@
 # Flappy Bat
 Flappy Bird but it has fangs
 
-Play at [https://samuel-lewis.itch.io/flappy-bat](samuel-lewis.itch.io/flappy-bat)
+Play at [samuel-lewis.itch.io/flappy-bat](https://samuel-lewis.itch.io/flappy-bat)
 
 [SPACE] to flap. Dodge the pipes.
 
